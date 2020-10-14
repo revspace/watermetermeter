@@ -12,7 +12,7 @@ int newval = 0;
 void setup()
 {
   Serial.begin(115200);
-  Serial.print( "Watermeter-Meter -- (C) 2020 Mark Janssen / Sig-I/O Automatisering\n\n" );
+  Serial.print( "Watermeter-Meter -- (C) 2020 Mark Janssen / Sig-I/O Automatisering\n\r\n" );
   pinMode(sensor, INPUT);
 }
 
@@ -24,7 +24,7 @@ void loop()
   }
   if ( newval == 0) {  
     if ( lastval > 0) {
-      Serial.print( "PULSE\n" );
+      Serial.print( "PULSE\n\r" );
     }
   }
   lastval = newval;
